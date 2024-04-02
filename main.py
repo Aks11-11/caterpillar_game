@@ -1,7 +1,6 @@
 import turtle as t
 import random as rd
 from typing import Any
-
 t.bgcolor('blue')
 caterpillar = t.Turtle()
 caterpillar.shape('square')
