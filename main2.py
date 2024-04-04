@@ -32,8 +32,6 @@ text_turtle.hideturtle()
 score_turtle = t.Turtle()
 score_turtle.hideturtle()
 score_turtle.speed(0)
-
-
 # Functions
 
 def outside_window():
@@ -43,8 +41,6 @@ def outside_window():
     bottom_wall = -t.window_height() / 2
     (x, y) = caterpillar.pos()
     return x < left_wall or x > right_wall or y < bottom_wall or y > top_wall
-
-
 def game_over():
     caterpillar.color('yellow')
     leaf.color('yellow')
@@ -84,18 +80,12 @@ def start_game():
     caterpillar.showturtle()
     display_score(score)
     place_leaf()
-
-
 def move_up():
     if caterpillar.heading() == 0 or caterpillar.heading() == 180:
         caterpillar.setheading(90)
-
-
 def move_down():
     if caterpillar.heading() == 0 or caterpillar.heading() == 180:
         caterpillar.setheading(270)
-
-
 def move_left():
     if caterpillar.heading() == 90 or caterpillar.heading() == 270:
         caterpillar.setheading(180)
