@@ -99,25 +99,19 @@ def move_down():
 def move_left():
     if caterpillar.heading() == 90 or caterpillar.heading() == 270:
         caterpillar.setheading(180)
-
-
 def move_right():
     if caterpillar.heading() == 90 or caterpillar.heading() == 270:
         caterpillar.setheading(0)
-
-
 # Keyboard bindings
 t.onkey(start_game, 'space')
 t.onkey(move_up, 'Up')
 t.onkey(move_right, 'Right')
 t.onkey(move_down, 'Down')
 t.onkey(move_left, 'Left')
-
 # Game loop
 while True:
     t.listen()
     t.update()
-
     # Game logic (moved outside the loop for better readability)
     if caterpillar.distance(leaf) < 20:
         place_leaf()
