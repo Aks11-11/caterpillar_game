@@ -77,6 +77,7 @@ while True:
     if outside_window():
         game_over()
         break
+
 def move_up():
     if caterpillar.heading() == 0 or caterpillar.heading() == 180:
         caterpillar.setheading(90)
